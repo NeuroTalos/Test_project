@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>Title</title>
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha512-Dop/vW3iOtayerlYAqCgkVr2aTr2ErwwTYOvRFUpzl2VhCMJyjQF0Q9TjUXIo6JhuM/3i0vVEt2e/7QQmnHQqw==" crossorigin="anonymous">
     <!-- Дополнительные стили Bootstrap (не обязательно) -->
@@ -13,23 +12,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap JS -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg==" crossorigin="anonymous"></script>
+    
+    <!--Шрифт Roboto-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400", rel="stylesheet">
 
+    <!--CSS файл-->
     <link rel="stylesheet" href={% static "style.css" %}>
+
+    
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-lg-offset-4">
-                <h1 class="title">Наш магазин скоро откроется</h1>
-                <h1 class="title">Оставляйте ваш email в форме ниже</h1>
-                <div>
-                    <form action="" method="post">{% csrf_token %}
-                    {{ form }}
+    <div class='general-container'>
+        <div class="container top-container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1 class="title">Наш магазин скоро откроется<br>
+                    Оставляйте ваш email в форме ниже</h1>
                     <div>
-                        <button type="submit" class="btn btn-primary">Отправить</button>
+                        <form action="" method="post" class="form form-inline text-center">{% csrf_token %}
+                        <div class="form-group">
+                            <label>Ваше имя: </label>
+                            <input name="{{ form.email.name }}" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Ваш email: </label>
+                            <input name="{{ form.name.name }}" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-orange">Отправить</button>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
