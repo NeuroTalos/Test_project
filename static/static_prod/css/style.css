@@ -5,6 +5,20 @@ html, body{
     background-color: #eedef0;
 }
 
+.navbar{
+    margin-bottom: 0;
+}
+
+.wrapper{
+    padding-bottom: 100px;
+}
+
+.footer{
+    margin-bottom: -100px;
+    background-color: white;
+    height: 200px;
+}
+
 .section-top{
     margin-bottom: 20px;
 }
@@ -19,9 +33,16 @@ html, body{
     margin-bottom: 10px;
 }
 
+.pres-img{
+    width: 74px;
+    height: 74px;
+    object-fit: cover;
+    margin: 10px auto 20px;
+}
+
 .add-to-cart-btn{
     position: absolute;
-    bottom: 15px;
+    bottom: 35px;
     left: 50px;
 }
 

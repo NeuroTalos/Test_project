@@ -3,6 +3,15 @@ from .models import *
 
 class ProductImageInline(admin.TabularInline):
     model = ProductImage
+    extra = 0
+
+class ProductCategoryAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in ProductCategory._meta.fields]
+
+    class Meta:
+        model = ProductCategory
+
+admin.site.register(ProductCategory, ProductCategoryAdmin)
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Product._meta.fields]
