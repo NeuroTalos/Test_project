@@ -83,3 +83,32 @@ html, body{
 .product-description-tabs{
     padding: 10px;
 }
+
+.navbar-top{
+    min-height: 10px;
+    height: 20px;
+    background: green;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-main{
+    background: #55e073;
+    border: none;
+    border-radius: 0;
+}
+
+.basket-container{
+    position: relative;
+    width: 400px;
+    padding: 15px 10px;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 10;
+    padding: 10px;
+    background: #55e093;
+}

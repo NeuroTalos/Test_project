@@ -46,3 +46,7 @@ html, body{
     left: 50px;
 }
 
+.navbar-top{
+    height: 20px;
+    background: green;
+}
