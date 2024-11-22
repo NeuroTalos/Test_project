@@ -1,7 +1,7 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 # URLConf
 urlpatterns = [
-    #path('hello/', views.text)
+    re_path(r'^basket_adding/$', views.basket_adding, name = 'basket_adding')
 ]
