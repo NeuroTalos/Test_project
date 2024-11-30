@@ -1,8 +1,6 @@
 from django import forms
 from .models import *
 
-# class SubscriberFrom(forms.ModelForm):
-
-#     class Meta:
-#         model = Subscriber
-#         exclude = [""]
+class CheckoutContactFrom(forms.Form):
+    name = forms.CharField(required = True)
+    phone= forms.CharField(required = True)

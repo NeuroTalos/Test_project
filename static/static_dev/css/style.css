@@ -112,3 +112,7 @@ html, body{
     padding: 10px;
     background: #55e093;
 }
+
+.form-error{
+    color: rgb(245, 23, 23);
+}
